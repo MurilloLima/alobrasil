@@ -23,9 +23,9 @@ class HomeController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function quemsomos()
     {
-        //
+        return view('home.pages.quem-somos');
     }
 
     /**

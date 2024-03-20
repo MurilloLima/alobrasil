@@ -7,21 +7,18 @@ use App\Http\Controllers\ImoveiController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('aluguel/', [HomeController::class, 'aluguel'])->name('home.aluguel.index');
+Route::get('quem-somos/', [HomeController::class, 'quemsomos'])->name('home.quemsomos');
 
-Route::get('/', [HomeController::class, 'index'])->name('home.pages.index');
+Route::get('vendas/', [HomeController::class, 'vendas'])->name('home.vendas.index');
+Route::get('contatos/', [HomeController::class, 'contatos'])->name('home.contatos.index');
+Route::post('contatos/store', [ContatoController::class, 'store'])->name('home.contatos.store');
+//view imoveis
+Route::get('imovel/{slug}', [HomeController::class, 'imovel'])->name('home.imovel.view');
+
 
 // admin
-
 Route::get('/dashboard', function () {
     return view('admin.pages.index');
 })->middleware(['auth', 'verified'])->name('dashboard');

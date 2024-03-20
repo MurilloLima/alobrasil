@@ -7,12 +7,19 @@ use Illuminate\Http\Request;
 
 class CategoriaController extends Controller
 {
+    private $categoria;
+    public function __construct(Categoria $categoria)
+    {
+        $this->categoria = $categoria;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $categoria = Categoria::orderby('id', 'DESC')->get();
+        return view('admin.pages.categoria.index', compact('categoria'));
     }
 
     /**
@@ -20,7 +27,7 @@ class CategoriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.categoria.create');
     }
 
     /**
@@ -28,7 +35,12 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+        ]);
+        $this->categoria->name = $request->name;
+        $this->categoria->save();
+        return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
     }
 
     /**
@@ -58,8 +70,9 @@ class CategoriaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categoria $categoria)
+    public function destroy($id)
     {
-        //
+        $this->categoria->destroy($id);
+        return redirect()->back()->with('msg', 'Deletada com sucesso!');
     }
 }
