@@ -11,15 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('imoveis', function (Blueprint $table) {
+        Schema::create('contatos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('cat_id')->constrained('categorias')->onDelete('CASCADE');
-            $table->string('img');
-            $table->string('name');
-            $table->string('slug');
-            $table->string('desc');
-            $table->string('content');
-            $table->string('city');
             $table->timestamps();
         });
     }
@@ -29,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('imoveis');
+        Schema::dropIfExists('contatos');
     }
 };
