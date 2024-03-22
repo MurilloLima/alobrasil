@@ -21,7 +21,7 @@
                             <a href="" class="me-2"><button type="button"
                                     class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">Destaques
                                     de Venda</button></a>
-                            <a href="" class="ms-2"><button type="button"
+                            <a href="{{ route('home.contatos.index') }}" class="ms-2"><button type="button"
                                     class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight">Contato</button></a>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                                     class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn1 animated fadeInLeft">
                                     Imóveis para viver bem!
                                 </button></a>
-                            <a href="" class="ms-2"><button type="button"
+                            <a href="{{ route('home.contatos.index') }}" class="ms-2"><button type="button"
                                     class="px-4 py-sm-3 px-sm-5 btn btn-primary rounded-pill carousel-content-btn2 animated fadeInRight">Contato
                                 </button></a>
                         </div>
@@ -338,7 +338,7 @@
                             </div>
                             <div class="ms-3">
                                 <h4 class="text-primary">Email</h4>
-                                <a class="h5" href="" target="_blank">contato@alobrasil.net</a>
+                                <a class="h5" href="{{ route('home.contatos.store') }}" target="_blank">contato@alobrasil.net</a>
                             </div>
                         </div>
                     </div>

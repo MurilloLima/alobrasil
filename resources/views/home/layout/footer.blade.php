@@ -32,6 +32,8 @@
                               class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a> --}}
                       <a href="" class="mb-2 text-white"><i
                               class="fas fa-angle-right text-secondary me-2"></i>Contatos</a>
+                      <a href="{{ route('login') }}" class="mb-2 text-white"><i
+                              class="fas fa-angle-right text-secondary me-2"></i>Login</a>
                   </div>
               </div>
               <div class="col-lg-3 col-md-6">

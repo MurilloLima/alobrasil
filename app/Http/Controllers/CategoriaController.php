@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CategoriaController extends Controller
 {
@@ -39,6 +40,7 @@ class CategoriaController extends Controller
             'name' => 'required',
         ]);
         $this->categoria->name = $request->name;
+        $this->categoria->slug = Str::slug($request->name);
         $this->categoria->save();
         return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
     }

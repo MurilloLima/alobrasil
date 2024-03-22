@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('imoveis', function (Blueprint $table) {
             $table->id();
+            $table->string('img');
+            $table->string('cat_id'); 
+            $table->string('name');
+            $table->string('slug');
+            $table->string('desc'); 
+            $table->longText('content');
+            $table->string('city');
             $table->timestamps();
         });
     }

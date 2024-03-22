@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     use HasFactory;
+
+    public function imovel()
+    {
+        return $this->hasMany(Imovei::class, 'cat_id');
+    }
 }

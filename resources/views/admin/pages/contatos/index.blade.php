@@ -19,7 +19,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard</li>
+                                <li class="breadcrumb-item active">Contatos</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -33,8 +33,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <!-- /.card -->
-                            <a href="{{ route('admin.imoveis.create') }}" class="btn btn-primary"
-                                style="margin-bottom: 5px;">Cadastrar</a>
+                            {{-- <a href="{{ route('admin.imoveis.create') }}" class="btn btn-primary"
+                                style="margin-bottom: 5px;">Cadastrar</a> --}}
 
                             <div class="card">
                                 <div class="card-body table-responsive p-0">

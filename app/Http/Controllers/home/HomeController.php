@@ -15,9 +15,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $cat = Categoria::orderby('id', 'DESC')->get();
+        $categorias = Categoria::orderby('id', 'DESC')->get();
         $imoveisV = Imovei::orderby('id', 'DESC')->limit(6)->get();
-        return view('home.pages.index', compact('cat', 'imoveisV'));
+        return view('home.pages.index', compact('categorias', 'imoveisV'));
     }
 
     /**
@@ -25,7 +25,8 @@ class HomeController extends Controller
      */
     public function quemsomos()
     {
-        return view('home.pages.quem-somos');
+        $categorias = Categoria::orderby('id', 'DESC')->get();
+        return view('home.pages.quem-somos', compact('categorias'));
     }
 
     /**
@@ -38,8 +39,8 @@ class HomeController extends Controller
 
     public function contatos()
     {
-        $cat = Categoria::orderby('id', 'DESC')->get();
-        return view('home.pages.contatos.index', compact('cat'));
+        $categorias = Categoria::orderby('id', 'DESC')->get();
+        return view('home.pages.contatos.index', compact('categorias'));
     }
 
     /**

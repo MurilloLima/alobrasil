@@ -7,12 +7,18 @@ use Illuminate\Http\Request;
 
 class ContatoController extends Controller
 {
+    private $contato;
+    public function __construct(Contato $contato)
+    {
+        $this->contato = $contato;
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $contatos = Contato::orderby('id','DESC')->get();
+        return view('admin.pages.contatos.index', compact('contatos'));
     }
 
     /**
@@ -28,7 +34,21 @@ class ContatoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'fone' => 'required',
+            'email' => 'required',
+            'assunto' => 'required',
+            'msg' => 'required',
+        ]);
+
+        $this->contato->name = $request->name;
+        $this->contato->fone = $request->fone;
+        $this->contato->email = $request->email;
+        $this->contato->assunto = $request->assunto;
+        $this->contato->msg = $request->msg;
+        $this->contato->save();
+        return redirect()->back()->with('msg', 'Contato recebido com sucesso!');
     }
 
     /**
