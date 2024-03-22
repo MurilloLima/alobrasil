@@ -47,7 +47,7 @@
                  <div class="navbar-nav ms-auto mx-xl-auto p-0">
                      <a href="/" class="nav-item nav-link">Home</a>
                      <a href="{{ route('home.quemsomos') }}" class="nav-item nav-link">Quem somos</a>
-                     <a href="" class="nav-item nav-link">Anuncie</a>
+                     <a href="{{ route('home.anuncie.index') }}" class="nav-item nav-link">Anuncie</a>
                      <div class="nav-item dropdown">
                          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Imóveis</a>
                          <div class="dropdown-menu rounded">

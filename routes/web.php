@@ -16,6 +16,8 @@ Route::get('contatos/', [HomeController::class, 'contatos'])->name('home.contato
 Route::post('contatos/store', [ContatoController::class, 'store'])->name('home.contatos.store');
 //view imoveis
 Route::get('imovel/{slug}', [HomeController::class, 'imovel'])->name('home.imovel.view');
+//anuncie
+Route::get('anuncie/', [HomeController::class, 'anuncie'])->name('home.anuncie.index');
 
 
 // admin
