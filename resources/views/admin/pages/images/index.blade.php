@@ -71,6 +71,7 @@
                                                     <img src="{{ asset('upload/imoveis/' . $item->image) }}"
                                                         class="img-fluid mb-2" alt="white sample">
                                                 </a>
+                                                <a href="#" class="btn btn-sm btn-danger  float-right"><i class="far fa-trash-alt"></i></a>
                                             </div>
                                         @endforeach
                                     </div>
