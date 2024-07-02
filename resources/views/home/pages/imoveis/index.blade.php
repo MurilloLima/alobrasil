@@ -14,16 +14,14 @@
                 @foreach ($data as $item)
                     <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
                         <div class="project-item">
+
                             <div class="project-img">
-                                <img src="{{ asset('upload/imoveis/' . $item->image) }}" class="img-fluid w-100 rounded"
-                                    alt="">
-                                <div class="project-content">
-                                    <a href="{{ route('home.imovel.view', $item->slug) }}" class="text-center">
-                                        {{-- <h4 class="text-secondary">{{ $item->cidade }}</h4> --}}
-                                        <p class="m-0 text-white">{{ $item->tipo->name }}</p>
-                                    </a>
-                                </div>
+                                <a href="{{ route('home.imovel.view', $item->slug) }}">
+                                    <img src="{{ asset('upload/imoveis/' . $item->image) }}" class="img-fluid w-100 rounded"
+                                        alt="">
+                                </a>
                             </div>
+
                         </div>
                         <div class="row">
                             <div class="col-md-12">
