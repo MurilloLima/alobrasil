@@ -22,15 +22,15 @@
               <div class="col-lg-3 col-md-6">
                   <a href="#" class="h3 text-secondary">Menu</a>
                   <div class="mt-4 d-flex flex-column short-link">
-                      <a href="" class="mb-2 text-white"><i
+                      <a href="/" class="mb-2 text-white"><i
                               class="fas fa-angle-right text-secondary me-2"></i>Home</a>
-                      <a href="" class="mb-2 text-white"><i
+                      <a href="{{ route('home.quemsomos') }}" class="mb-2 text-white"><i
                               class="fas fa-angle-right text-secondary me-2"></i>Quem somos</a>
-                      <a href="" class="mb-2 text-white"><i
+                      <a href="{{ route('home.anuncie.index') }}" class="mb-2 text-white"><i
                               class="fas fa-angle-right text-secondary me-2"></i>Anuncie</a>
                       {{-- <a href="" class="mb-2 text-white"><i
                               class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a> --}}
-                      <a href="" class="mb-2 text-white"><i
+                      <a href="{{ route('home.contatos.index') }}" class="mb-2 text-white"><i
                               class="fas fa-angle-right text-secondary me-2"></i>Contatos</a>
                       <a href="{{ route('login') }}" class="mb-2 text-white"><i
                               class="fas fa-angle-right text-secondary me-2"></i>Entrar</a>
