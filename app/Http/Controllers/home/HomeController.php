@@ -53,8 +53,9 @@ class HomeController extends Controller
     public function tipo($id)
     {
         $tipo = Categoria::latest()->get();
-        $data = Imovei::where('imovel_id', $id)->get();
-        return view('home.pages.imoveis.index', compact('tipo', 'data'));
+        $data = Imovei::where('cat_id', $id)->get();
+        $tipo1 = Categoria::find($id);
+        return view('home.pages.imoveis.index', compact('tipo','tipo1', 'data'));
     }
 
     /**
