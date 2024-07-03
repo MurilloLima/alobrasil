@@ -47,8 +47,7 @@
                               class="fas fa-angle-right text-secondary me-2"></i>Helps</a> --}}
                       <a href="" class="mb-2 text-white"><i
                               class="fas fa-angle-right text-secondary me-2"></i>FQAs</a>
-                      <a href="" class="mb-2 text-white"><i
-                              class="fas fa-angle-right text-secondary me-2"></i>Contatos</a>
+                 
                   </div>
               </div>
               <div class="col-lg-3 col-md-6">
