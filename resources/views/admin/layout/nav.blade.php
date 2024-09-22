@@ -65,15 +65,15 @@
                   <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
 
-                  {{-- <li class="nav-item">
+                  <li class="nav-item">
                       <a href="{{ route('admin.slider.index') }}" class="nav-link">
                           <ion-icon name="image-outline"></ion-icon>
                           <p>
-                              Slider
+                              Categorias
                           </p>
                       </a>
 
-                  </li> --}}
+                  </li> 
                   <li class="nav-item">
                       <a href="{{ route('admin.imoveis.index') }}" class="nav-link">
                           {{-- <i class="nav-icon fas font-awesome"></i> --}}

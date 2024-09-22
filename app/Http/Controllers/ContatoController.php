@@ -48,7 +48,7 @@ class ContatoController extends Controller
         $this->contato->assunto = $request->assunto;
         $this->contato->msg = $request->msg;
         $this->contato->save();
-        return redirect()->back()->with('msg', 'Contato recebido com sucesso! Entraremos em contato.');
+        return redirect()->back()->with('msg', 'Mensagem enviada com sucesso! Entraremos em contato.');
     }
 
     /**
