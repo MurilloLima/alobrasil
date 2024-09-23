@@ -10,6 +10,11 @@ class Categoria extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'slug'
+    ];
+
     public function imoveis(): HasMany
     {
         return $this->hasMany(Imovei::class, 'tipo');

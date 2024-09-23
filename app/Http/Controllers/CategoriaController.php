@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categoria;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class CategoriaController extends Controller
 {
@@ -29,7 +30,11 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Categoria::create([
+            'name' => $request->input('name'),
+            'slug' => Str::slug($request->name, '-')
+        ]);
+        return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
     }
 
     /**
@@ -59,8 +64,10 @@ class CategoriaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Categoria $categoria)
+    public function destroy($id)
     {
-        //
+        Categoria::destroy($id);
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
+
     }
 }

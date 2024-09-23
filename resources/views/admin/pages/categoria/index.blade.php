@@ -74,18 +74,14 @@
 
                                                     <td>{{ $item->name }}</td>
                                                     <td style="width: 100px" class="text-center">
-                                                        <a href="{{ route('admin.categoria.edit', [$item->id]) }}"
-                                                            class="btn btn-sm btn-primary">
-                                                            <ion-icon name="create-outline"></ion-icon>
-                                                        </a>
-                                                        <form onsubmit="return confirm('Deseja excluir?');"
+
+                                                        <form onsubmit="return confirm('Deletar essa categoria?');"
                                                             action="{{ route('admin.pages.categoria.destroy', $item->id) }}"
                                                             method="POST">
-
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="submit" class="btn btn-sm btn-danger">
-                                                                <ion-icon name="trash-outline"></ion-icon>
+                                                                <i class="fas fa-trash"></i>
                                                             </button>
                                                         </form>
                                                     </td>
@@ -115,26 +111,31 @@
 
 
         <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Categoria</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="{{ route('admin.categoria.store') }}" method="post">
+                        @csrf
+                        <div class="modal-body">
+                            <label for="">Nome</label>
+                            <input type="text" class="form-control" name="name" placeholder="Categoria">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fachar</button>
+                            <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+
         @include('admin.layout.footer')
     </div>
 @endsection
