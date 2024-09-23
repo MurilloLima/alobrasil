@@ -32,12 +32,12 @@ Route::middleware('auth')->group(function () {
     //dashboard
     Route::get('/dashboard',  [DashboardController::class, 'index'])->name('dashboard');
     //categorias
-    // Route::get('admin/categoria/', [CategoriaController::class, 'index'])->name('admin.categoria.index');
-    // Route::get('admin/categoria/create', [CategoriaController::class, 'create'])->name('admin.categoria.create');
-    // Route::get('admin/categoria/edit/{id}', [CategoriaController::class, 'edit'])->name('admin.categoria.edit');
-    // Route::post('admin/categoria/update', [CategoriaController::class, 'update'])->name('admin.categoria.update');
-    // Route::post('admin/categoria/store', [CategoriaController::class, 'store'])->name('admin.categoria.store');
-    // Route::delete('admin/categoria/delete/{id}', [CategoriaController::class, 'destroy'])->name('admin.pages.categoria.destroy');
+    Route::get('admin/categoria/', [CategoriaController::class, 'index'])->name('admin.categoria.index');
+    Route::get('admin/categoria/create', [CategoriaController::class, 'create'])->name('admin.categoria.create');
+    Route::get('admin/categoria/edit/{id}', [CategoriaController::class, 'edit'])->name('admin.categoria.edit');
+    Route::post('admin/categoria/update', [CategoriaController::class, 'update'])->name('admin.categoria.update');
+    Route::post('admin/categoria/store', [CategoriaController::class, 'store'])->name('admin.categoria.store');
+    Route::delete('admin/categoria/delete/{id}', [CategoriaController::class, 'destroy'])->name('admin.pages.categoria.destroy');
 
     //slider
     //  Route::get('admin/slider/', [SliderController::class, 'index'])->name('admin.slider.index');

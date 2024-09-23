@@ -56,8 +56,8 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <!-- /.card -->
-                            <a href="{{ route('admin.categoria.create') }}" class="btn btn-primary"
-                                style="margin-bottom: 5px;">Cadastrar</a>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                                style="margin-bottom: 5px;">Cadastrar</button>
 
                             <div class="card">
                                 <div class="card-body table-responsive p-0">
@@ -113,6 +113,28 @@
         </aside>
         <!-- /.control-sidebar -->
 
+
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
         @include('admin.layout.footer')
     </div>
 @endsection

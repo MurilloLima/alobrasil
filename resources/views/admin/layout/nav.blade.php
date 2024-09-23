@@ -66,7 +66,7 @@
                with font-awesome or any other icon font library -->
 
                   <li class="nav-item">
-                      <a href="{{ route('admin.slider.index') }}" class="nav-link">
+                      <a href="{{ route('admin.categoria.index') }}" class="nav-link">
                           <ion-icon name="image-outline"></ion-icon>
                           <p>
                               Categorias
