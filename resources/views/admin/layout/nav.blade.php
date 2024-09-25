@@ -81,7 +81,7 @@
                           <ion-icon name="home-outline"></ion-icon>
 
                           <p>
-                              Imóveis
+                              Cadastrar
                               <span class="badge badge-danger right">
                                   {{ App\Models\Imovei::count() }}
                               </span>

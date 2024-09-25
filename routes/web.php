@@ -61,7 +61,7 @@ Route::middleware('auth')->group(function () {
     //imoveis fotos
     Route::get('admin/fotos/imoveis/{id}', [ImoveiController ::class, 'fotos'])->name('admin.imoveis.fotos');
     Route::post('admin/fotos/imoveis/store', [ImageController::class, 'store'])->name('admin.imoveis.fotos.store');
-    Route::delete('admin/image/delete/{id}', [ImoveiController::class, 'destroyfoto'])->name('admin.image.destroy');
+    Route::get('admin/image/delete/{id}', [ImageController::class, 'destroy'])->name('admin.image.destroy');
   
    
     //CONTATOS

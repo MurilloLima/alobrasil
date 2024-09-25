@@ -43,7 +43,7 @@ class ImageController extends Controller
             $this->image->imovel_id = $request->id;
             $this->image->save();
             return redirect()->back()->with('msg', 'Cadastrado com sucesso!');
-        }  
+        }
     }
 
     /**
@@ -73,8 +73,9 @@ class ImageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Image $image)
+    public function destroy($id)
     {
-        //
+        $this->image->destroy($id);
+        return redirect()->back()->with('msg', 'Deletado com sucesso!');
     }
 }
