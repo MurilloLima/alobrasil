@@ -634,9 +634,15 @@
 }
 
 .contact-map {
+    /* width: 320px; */
     background: #26d48c;
 }
 
+.contact-map iframe{
+    width: 100%;
+    height: auto;
+    background: #26d48c;
+}
 .contact-form {
     background: #26d48c;
 }

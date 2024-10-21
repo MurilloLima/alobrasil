@@ -223,7 +223,7 @@
                             <div class="ms-3">
                                 <h4 class="text-primary">Email</h4>
                                 <a class="h5" href="{{ route('home.contatos.store') }}"
-                                    target="_blank">contato@alobrasil.net</a>
+                                    target="_blank">cont@conta</a>
                             </div>
                         </div>
                     </div>
