@@ -82,8 +82,7 @@
                                                     <label for="customFile">Imagem</label>
                                                     <div class="custom-file">
                                                         <input type="file" name="image" required
-                                                            class="custom-file-input" placeholder=""
-                                                            id="customFile">
+                                                            class="custom-file-input" placeholder="" id="customFile">
                                                         <label class="custom-file-label" for="customFile">Imagem</label>
                                                     </div>
                                                 </div>
@@ -141,8 +140,8 @@
                                             <div class="col-md-2">
                                                 <div class="form-group">
                                                     <label for="">Valor</label>
-                                                    <input type="text" class="form-control" name="valor"
-                                                        placeholder="0.00">
+                                                    <input type="text" class="form-control" name="valor" placeholder="Digite aqui"
+                                                        onKeyPress="return(moeda(this,'.',',',event))">
                                                 </div>
                                             </div>
 

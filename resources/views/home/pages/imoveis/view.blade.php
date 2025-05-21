@@ -11,6 +11,7 @@
         width: 100%;
     }
 </style>
+
 @section('content')
     <div class="container-fluid py-5 my-5">
         <div class="container py-5">
@@ -20,11 +21,36 @@
                     <div style="margin: 5px 0px;">
                         @foreach ($data->images as $item)
                             <a class="example-image-link" href="{{ asset('upload/imoveis/' . $item->image) }}"
-                                data-lightbox="example-set" data-title="{{ $data->endereco }}">
+                                data-lightbox="example-1">
                                 <img class="example-image" src="{{ asset('upload/imoveis/' . $item->image) }}"
                                     alt="" width="103" height="103" style="padding: 0px; margin-top: 5px;" />
                             </a>
                         @endforeach
+
+                        {{-- modal --}}
+                        <div class="modal fade bd-example-modal-lg" id="exampleModalLong3" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLongTitle3" aria-hidden="true">
+
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    {{-- <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div> --}}
+                                    <div class="modal-body p-0 pb-3">
+                                        @foreach ($data->images as $item)
+                                            <img src="{{ asset('upload/imoveis/' . $item->image) }}">
+                                        @endforeach
+                                    </div>
+                                    {{-- <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div> --}}
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
                 <div class="col-md-5">
