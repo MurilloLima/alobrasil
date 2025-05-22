@@ -15,47 +15,31 @@
 @section('content')
     <div class="container-fluid py-5 my-5">
         <div class="container py-5">
+            <div class="container gallery-container">
+
+                <h1>{{ $data->endereco }}</h1>
+
+                <p class="page-description text-left">Clique na image para amplia-la</p>
+
+
+            </div>
+
             <div class="row">
                 <div class="col-md-7">
-                    <img src="{{ asset('upload/imoveis/' . $data->image) }}" alt="" class="img-fluid">
-                    <div style="margin: 5px 0px;">
+                    <div class="tz-gallery">
                         @foreach ($data->images as $item)
-                            <a class="example-image-link" href="{{ asset('upload/imoveis/' . $item->image) }}"
-                                data-lightbox="example-1">
-                                <img class="example-image" src="{{ asset('upload/imoveis/' . $item->image) }}"
-                                    alt="" width="103" height="103" style="padding: 0px; margin-top: 5px;" />
-                            </a>
-                        @endforeach
-
-                        {{-- modal --}}
-                        <div class="modal fade bd-example-modal-lg" id="exampleModalLong3" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLongTitle3" aria-hidden="true">
-
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    {{-- <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div> --}}
-                                    <div class="modal-body p-0 pb-3">
-                                        @foreach ($data->images as $item)
-                                            <img src="{{ asset('upload/imoveis/' . $item->image) }}">
-                                        @endforeach
-                                    </div>
-                                    {{-- <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div> --}}
-                                </div>
+                            <div class="col-md-4" style="margin-top: 3px">
+                                <a class="lightbox" href="{{ asset('upload/imoveis/' . $item->image) }}">
+                                    <img src="{{ asset('upload/imoveis/' . $item->image) }}" width="200" alt="Bridge">
+                                </a>
                             </div>
-                        </div>
-
-
+                        @endforeach
                     </div>
+
                 </div>
                 <div class="col-md-5">
                     <h5 class="text-primary">Imóvel {{ $data->tipo->name }}</h5>
-                    <h1 class="mb-4">{{ $data->endereco }}</h1>
+                    {{-- <h1 class="mb-4">{{ $data->endereco }}</h1> --}}
                     <p>{{ $data->city }}</p>
                     <p>Area m² {{ $data->area }}</p>
                     <p>Quartos {{ $data->quartos }}</p>
@@ -82,4 +66,5 @@
             </div>
         </div>
     </div>
+
 @endsection

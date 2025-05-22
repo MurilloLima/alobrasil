@@ -31,8 +31,11 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('home/css/style.css') }}" rel="stylesheet">
 
-    {{-- galeria --}}
-
+    {{-- galeria images --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="{{ asset('home/css/fluid-gallery.css') }}">
 </head>
 
 <body>
@@ -52,6 +55,13 @@
     <script src="{{ asset('home/lib/waypoints/waypoints.min.js') }}"></script>
     <script src="{{ asset('home/lib/owlcarousel/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('home/js/main.js') }}"></script>
+
+    {{-- galeria --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+
 </body>
 
 </html>
