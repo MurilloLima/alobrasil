@@ -27,13 +27,13 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="tz-gallery">
-                        @foreach ($data->images as $item)
-                            <div class="col-md-4" style="margin-top: 3px">
+                        <div class="row">
+                            @foreach ($data->images as $item)
                                 <a class="lightbox" href="{{ asset('upload/imoveis/' . $item->image) }}">
                                     <img src="{{ asset('upload/imoveis/' . $item->image) }}" width="200" alt="Bridge">
                                 </a>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
 
                 </div>
