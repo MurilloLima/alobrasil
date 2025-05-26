@@ -143,31 +143,32 @@
             <div class="row g-5">
                 @foreach ($imoveis as $item)
                     <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                        <div class="project-item">
-                            <div class="project-img">
-                                <img src="{{ asset('upload/imoveis/' . $item->image) }}" class="img-fluid w-100 rounded"
-                                    alt="">
-                                <div class="project-content">
-                                    <a href="{{ route('home.imovel.view', $item->slug) }}" class="text-center">
+                        <a href="{{ route('home.imovel.view', $item->slug) }}" class="text-center">
+                            <div class="project-item">
+                                <div class="project-img">
+                                    <img src="{{ asset('upload/imoveis/' . $item->image) }}"
+                                        class="img-fluid w-100 rounded" alt="">
+                                    <div class="project-content">
                                         {{-- <h4 class="text-secondary">{{ $item->cidade }}</h4> --}}
                                         <p class="m-0 text-white">{{ $item->tipo->name }}</p>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a href="{{ route('home.imovel.view', $item->slug) }}">
-                                    <h3>{{ $item->endereco }}</h3>
-                                </a>
-                                Cidade: {{ $item->city }} <br>
-                                Quartos: {{ $item->quartos }} <br>
-                                Banheiros: {{ $item->banheiros }} <br>
-                                Garagem: {{ $item->garagem }} <br>
-                                Área: {{ $item->area }} <br>
-                                <strong>{{ $item->desc }}</strong>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a href="{{ route('home.imovel.view', $item->slug) }}">
+                                        <h3>{{ $item->endereco }}</h3>
+                                    </a>
+                                    Cidade: {{ $item->city }} <br>
+                                    Quartos: {{ $item->quartos }} <br>
+                                    Banheiros: {{ $item->banheiros }} <br>
+                                    Garagem: {{ $item->garagem }} <br>
+                                    Área: {{ $item->area }} <br>
+                                    <strong>{{ $item->desc }}</strong>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+
                     </div>
                 @endforeach
             </div>

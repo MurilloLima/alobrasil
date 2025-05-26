@@ -445,6 +445,7 @@
 }
 
 .project-item:hover .project-content {
+    /* background-color: #26d48c; */
     opacity: 1;
     transition: .5s;
 }
