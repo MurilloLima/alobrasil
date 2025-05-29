@@ -1,14 +1,25 @@
 /*** Spinner Start ***/
 
 .lightbox {
-    width: 220px;
+    width: 200px;
     height: auto;
-    padding: 4px;
+    /* padding: 4px; */
+    /* padding-left: 4px; */
     float: left;
     /* position: absolute; */
 
 }
+.lightbox img{
+    width: 200px;
+    height: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    /* padding-left: 4px; */
+    float: left;
+    /* position: absolute; */
 
+}
 .galeria ul li {
     list-style-type: none;
 }
