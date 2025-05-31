@@ -33,7 +33,7 @@
                     <div class="tz-gallery">
                         @foreach ($data->images as $item)
                             <a class="lightbox" href="{{ asset('upload/imoveis/' . $item->image) }}">
-                                <img src="{{ asset('upload/imoveis/' . $item->image) }}" width="200" alt="Bridge">
+                                <img src="{{ asset('upload/imoveis/' . $item->image) }}" width="200" alt="">
                             </a>
                         @endforeach
                     </div>
