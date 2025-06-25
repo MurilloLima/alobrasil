@@ -54,7 +54,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Compartilhar</p>
+                        <span style="font-size: 10px">Compartilhar</span> <br>
                         <a href="https://api.whatsapp.com/send?text=link/{{ $data->slug }}">
                             <img src="{{ asset('home/img/whatsapp.png') }}" class="whatsapp" alt="" width="25">
                         </a>
