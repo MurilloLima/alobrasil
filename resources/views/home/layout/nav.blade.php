@@ -13,7 +13,7 @@
                  <small class="me-3 text-white-50"><a href="#"><i
                              class="fas fa-map-marker-alt me-2 text-secondary"></i></a>Av Chico Brito, N 1317</small>
                  <small class="me-3 text-white-50"><a href="#"><i
-                             class="fas fa-envelope me-2 text-secondary"></i></a>contato@alobrasil</small>
+                             class="fas fa-envelope me-2 text-secondary"></i></a>contato@alobrasil.net</small>
              </div>
              {{-- <div id="note" class="text-secondary d-none d-xl-flex"><small>Note : We help you to Grow your
                      Business</small></div> --}}
