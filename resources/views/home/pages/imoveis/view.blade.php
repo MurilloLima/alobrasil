@@ -16,18 +16,14 @@
     <div class="container-fluid my-5">
         <div class="container py-5">
             <div class="container gallery-container">
-
                 <h1>{{ $data->tipo->name }},{{ $data->endereco }}</h1>
-
                 <p class="page-description text-left">Clicar na imagem para vê-la ampliada</p>
-
-
             </div>
             <div class="row">
                 <div class="col-md-7">
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="{{ asset('upload/imoveis/' . $data->image) }}" alt="">
+                            <img src="{{ asset('upload/imoveis/' . $data->image) }}" alt="" width="600">
                         </div>
                     </div>
                     <div class="tz-gallery">
