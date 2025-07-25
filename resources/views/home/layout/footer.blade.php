@@ -58,7 +58,7 @@
                       <a href="#" class="py-3 text-light border-bottom border-primary"><i
                               class="fas fa-phone-alt text-secondary me-2"></i> +55 99 8285-4848</a>
                       <a href="#" class="py-3 text-light border-bottom border-primary"><i
-                              class="fas fa-envelope text-secondary me-2"></i> contato@alobrasil</a>
+                              class="fas fa-envelope text-secondary me-2"></i> contato@alobrasil.net</a>
                   </div>
               </div>
           </div>
