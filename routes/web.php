@@ -57,7 +57,7 @@ Route::middleware('auth')->group(function () {
     Route::post('admin/imoveis/store/', [ImoveiController::class, 'store'])->name('admin.imoveis.store');
     Route::get('admin/imoveis/edit/{id}', [ImoveiController::class, 'edit'])->name('admin.imoveis.edit');
     Route::post('admin/imoveis/update/{id}', [ImoveiController::class, 'update'])->name('admin.imoveis.update');
-    Route::delete('admin/imoveis/delete/{id}', [ImoveiController::class, 'destroy'])->name('admin.imoveis.destroy');
+    Route::get('admin/imoveis/delete/{id}', [ImoveiController::class, 'destroy'])->name('admin.imoveis.destroy');
     //imoveis fotos
     Route::get('admin/fotos/imoveis/{id}', [ImoveiController ::class, 'fotos'])->name('admin.imoveis.fotos');
     Route::post('admin/fotos/imoveis/store', [ImageController::class, 'store'])->name('admin.imoveis.fotos.store');

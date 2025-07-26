@@ -75,8 +75,8 @@
                                                     <td>{{ $item->endereco }}</td>
                                                     <td>{{ $item->desc }}</td>
                                                     <td>{{ $item->tipo->name }}</td>
-                                                    <td style="width: 140px;">
-                                                        <a href="{{ route('admin.imoveis.fotos', $item->id) }}"
+                                                    <td style="width: 160px;">
+                                                        <a href="{{ route('admin.imoveis.fotos', $item->id) }}" title="Imagens"
                                                             class="btn btn-success btn-sm" title="Fotos">
                                                             <i class="nav-icon far fa-image"></i>
                                                         </a>
@@ -84,16 +84,10 @@
                                                             title="Editar" class="btn btn-primary btn-sm">
                                                             <i class="far fa-edit"></i>
                                                         </a>
-                                                        <form onsubmit="return confirm('Deseja excluir?');"
-                                                            action="{{ route('admin.imoveis.destroy', $item->id) }}"
-                                                            method="POST" style="float: right;">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit" title="Deletar"
-                                                                class="btn btn-danger btn-sm">
-                                                                <i class="fas fa-trash"></i>
-                                                            </button>
-                                                        </form>
+                                                        <a href="{{ route('admin.imoveis.destroy', $item->id) }}"
+                                                            title="Editar" class="btn btn-danger btn-sm">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
                                                         {{-- <a href=""
                                                             class="btn-sm btn-primary">Fotos
                                                         </a>
