@@ -147,7 +147,7 @@
                             <div class="project-item">
                                 <div class="project-img">
                                     <img src="{{ asset('upload/imoveis/' . $item->image) }}"
-                                        class="img-fluid w-100 rounded" alt="">
+                                        class="img-fluid w-100 rounded" style="widows: 100%; height: 200px;" alt="">
                                     <div class="project-content">
                                         {{-- <h4 class="text-secondary">{{ $item->cidade }}</h4> --}}
                                         <p class="m-0 text-white">{{ $item->tipo->name }}</p>

@@ -18,7 +18,7 @@
                             <div class="project-img">
                                 <a href="{{ route('home.imovel.view', $item->slug) }}">
                                     <img src="{{ asset('upload/imoveis/' . $item->image) }}" class="img-fluid w-100 rounded"
-                                        alt="">
+                                        style="width: 100%; height: 200px;" alt="">
                                 </a>
                             </div>
 

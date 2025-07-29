@@ -76,6 +76,10 @@
                                                     <td>{{ $item->desc }}</td>
                                                     <td>{{ $item->tipo->name }}</td>
                                                     <td style="width: 160px;">
+                                                        <a href="{{ route('admin.imoveis.fotos', $item->id) }}" title="Vídeos"
+                                                            class="btn btn-danger btn-sm" title="Fotos">
+                                                            <i class="nav-icon far fa-image"></i>
+                                                        </a>
                                                         <a href="{{ route('admin.imoveis.fotos', $item->id) }}" title="Imagens"
                                                             class="btn btn-success btn-sm" title="Fotos">
                                                             <i class="nav-icon far fa-image"></i>

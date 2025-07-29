@@ -105,6 +105,7 @@ class ImoveiController extends Controller
             'desc' => 'required',
             'image' => 'required|image',
         ]);
+        
         // upload de image
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             # code...

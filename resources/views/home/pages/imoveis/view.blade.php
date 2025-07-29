@@ -23,7 +23,8 @@
                 <div class="col-md-7">
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="{{ asset('upload/imoveis/' . $data->image) }}" alt="" width="600">
+                            <img src="{{ asset('upload/imoveis/' . $data->image) }}" alt=""
+                                style="width: 100%; height: 400px;">
                         </div>
                     </div>
                     <div class="tz-gallery">

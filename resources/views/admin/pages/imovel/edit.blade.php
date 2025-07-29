@@ -79,9 +79,8 @@
                                                 <div class="form-group">
                                                     <label for="customFile">Imagem</label>
                                                     <div class="custom-file">
-                                                        <input type="file" name="image" required
-                                                            value="{{ $data->image }}" class="custom-file-input"
-                                                            placeholder="" id="customFile">
+                                                        <input type="file" name="image" value="{{ $data->image }}"
+                                                            class="custom-file-input" placeholder="" id="customFile">
                                                         <label class="custom-file-label" for="customFile">Imagem</label>
                                                     </div>
                                                 </div>
