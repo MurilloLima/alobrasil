@@ -27,14 +27,14 @@
                                 style="width: 100%; height: 400px;">
                         </div>
                     </div>
-                    <div class="tz-gallery">
-                        @foreach ($data->images as $item)
+                    @foreach ($data->images as $item)
+                        <div class="image">
                             <a class="lightbox" href="{{ asset('upload/imoveis/' . $item->image) }}">
                                 <img src="{{ asset('upload/imoveis/' . $item->image) }}"
                                     style="width: 100px; height: 100px;" alt="">
                             </a>
-                        @endforeach
-                    </div>
+                        </div>
+                    @endforeach
 
                 </div>
                 <div class="col-md-5">
@@ -52,11 +52,10 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p>Vídeos</p>
+                        <p>Veja os vídeos</p>
                         @foreach ($data->videos as $item)
                             <a class="lightbox" href="{{ asset('upload/video/' . $item->file) }}">
-                                <video src="{{ asset('upload/video/' . $item->file ? '') }}"
-                                    style="width: 100px; height: 100px;"></video>
+                                <video src="{{ asset('upload/video/' . $item->file ?? '') }}" class="video"></video>
                             </a>
                         @endforeach
 

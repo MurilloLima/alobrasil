@@ -9,7 +9,8 @@
     /* position: absolute; */
 
 }
-.lightbox img{
+
+.lightbox img {
     width: 200px;
     height: auto;
     padding-top: 2px;
@@ -20,6 +21,7 @@
     /* position: absolute; */
 
 }
+
 .galeria ul li {
     list-style-type: none;
 }
@@ -703,3 +705,23 @@
 }
 
 /*** Footer End ***/
+.image{
+    float: left;
+    padding: 4px;
+    width: 200px;
+    height: 140px;
+}
+.image img{
+    width: 100% !important;
+    height: auto;
+}
+
+.video{
+    padding: 4px;
+    width: 200px;
+    height: 140px;
+}
+.video video{
+    width: 100%;
+    height: auto;
+}
