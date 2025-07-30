@@ -35,4 +35,9 @@ class Imovei extends Model
     {
         return $this->hasMany(Image::class, 'imovel_id');
     }
+
+    public function videos(): HasMany
+    {
+        return $this->hasMany(Video::class, 'id_imovel');
+    }
 }

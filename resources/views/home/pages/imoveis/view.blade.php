@@ -52,9 +52,10 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        @foreach ($video as $item)
+                        <p>Vídeos</p>
+                        @foreach ($data->videos as $item)
                             <a class="lightbox" href="{{ asset('upload/video/' . $item->file) }}">
-                                <video src="{{ asset('upload/video/as.mov') }}"
+                                <video src="{{ asset('upload/video/' . $item->file ? '') }}"
                                     style="width: 100px; height: 100px;"></video>
                             </a>
                         @endforeach
