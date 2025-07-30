@@ -68,11 +68,11 @@
                                             <div class="col-sm-2">
                                                 <a href="" data-toggle="lightbox" data-title="sample 1 - white"
                                                     data-gallery="gallery">
-                                                    <img src="{{ asset('upload/imoveis/' . $item->image) }}"
+                                                    <img src="{{ asset('upload/imoveis/' . $item->image) }}" style="width: 100px; height: 100px;"
                                                         class="img-fluid mb-2" alt="white sample">
                                                 </a>
                                                 <a href="{{ route('admin.image.destroy', ['id' => $item->id]) }}"
-                                                    class="btn btn-sm btn-danger  float-right"><i
+                                                    class="btn btn-sm btn-danger float-right"><i
                                                         class="far fa-trash-alt"></i></a>
                                             </div>
                                         @endforeach

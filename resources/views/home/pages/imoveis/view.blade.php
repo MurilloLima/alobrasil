@@ -31,7 +31,7 @@
                         @foreach ($data->images as $item)
                             <a class="lightbox" href="{{ asset('upload/imoveis/' . $item->image) }}">
                                 <img src="{{ asset('upload/imoveis/' . $item->image) }}"
-                                    style="width: 200px; height: 200px;" alt="">
+                                    style="width: 100px; height: 100px;" alt="">
                             </a>
                         @endforeach
                     </div>
@@ -49,6 +49,17 @@
                     <p class="mb-4">{{ $data->desc }}</p>
                     <a href="https://wa.me//559982854848?text=Tenho%20interesse%20em%20comprar%20seu%20imóvel"
                         class="btn btn-secondary rounded-pill px-5 py-3 text-white">Tenho interesse</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @foreach ($video as $item)
+                            <a class="lightbox" href="{{ asset('upload/video/' . $item->file) }}">
+                                <video src="{{ asset('upload/video/as.mov') }}"
+                                    style="width: 100px; height: 100px;"></video>
+                            </a>
+                        @endforeach
+
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">

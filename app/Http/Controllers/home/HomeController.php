@@ -7,6 +7,7 @@ use App\Models\Categoria;
 use App\Models\Image;
 use App\Models\Imovei;
 use App\Models\Rural;
+use App\Models\Video;
 
 class HomeController extends Controller
 {
@@ -65,6 +66,7 @@ class HomeController extends Controller
     {
         $tipo = Categoria::latest()->get();
         $data = Imovei::where('slug', '=', $slug)->first();
-        return view('home.pages.imoveis.view', compact('data', 'tipo'));
+        $video = Video::where('id_imovel','=', $data->id)->get();
+        return view('home.pages.imoveis.view', compact('data', 'tipo', 'video'));
     }
 }

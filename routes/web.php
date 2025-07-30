@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\DashboardController;
@@ -26,6 +27,7 @@ Route::get('imovel/{slug}', [HomeController::class, 'view'])->name('home.imovel.
 //anuncie
 Route::get('anuncie/', [HomeController::class, 'anuncie'])->name('home.anuncie.index');
 
+Route::get('phpinfo', fn () => phpinfo());
 
 // admin
 Route::middleware('auth')->group(function () {
@@ -45,28 +47,25 @@ Route::middleware('auth')->group(function () {
     //  Route::post('admin/slider/store', [SliderController::class, 'store'])->name('admin.slider.store');
 
     // imoveis
-    // Route::get('admin/imoveis/', [ImoveiController::class, 'index'])->name('admin.imoveis.index');
-    // Route::get('admin/imoveis/create', [ImoveiController::class, 'create'])->name('admin.imoveis.create');
-    // Route::post('admin/imoveis/store/', [ImoveiController::class, 'store'])->name('admin.imoveis.store');
-    // Route::get('admin/imoveis/edit/{id}', [ImoveiController::class, 'edit'])->name('admin.pages.imovel.edit');
-    // Route::get('admin/imoveis/delete/{id}', [ImoveiController::class, 'destroy'])->name('admin.pages.imovel.destroy');
-
-    // imoveis
     Route::get('admin/imoveis/', [ImoveiController::class, 'index'])->name('admin.imoveis.index');
     Route::get('admin/imoveis/create', [ImoveiController::class, 'create'])->name('admin.imoveis.create');
     Route::post('admin/imoveis/store/', [ImoveiController::class, 'store'])->name('admin.imoveis.store');
     Route::get('admin/imoveis/edit/{id}', [ImoveiController::class, 'edit'])->name('admin.imoveis.edit');
     Route::post('admin/imoveis/update/{id}', [ImoveiController::class, 'update'])->name('admin.imoveis.update');
     Route::get('admin/imoveis/delete/{id}', [ImoveiController::class, 'destroy'])->name('admin.imoveis.destroy');
+   
     //imoveis fotos
     Route::get('admin/fotos/imoveis/{id}', [ImoveiController ::class, 'fotos'])->name('admin.imoveis.fotos');
     Route::post('admin/fotos/imoveis/store', [ImageController::class, 'store'])->name('admin.imoveis.fotos.store');
     Route::get('admin/image/delete/{id}', [ImageController::class, 'destroy'])->name('admin.image.destroy');
-  
    
     //CONTATOS
     Route::get('admin/contatos/', [ContatoController::class, 'index'])->name('admin.pages.contatos.index');
 
+    //videos
+    Route::get('admin/video/{id}', [VideoController::class, 'index'])->name('admin.pages.video.index');
+    Route::post('admin/video/store', [VideoController::class, 'store'])->name('admin.pages.video.store');
+    Route::get('admin/video/delete/{id}', [VideoController::class, 'destroy'])->name('admin.video.destroy');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
