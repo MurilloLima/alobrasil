@@ -12,6 +12,23 @@
 
 .lightbox img {
     width: 200px;
+    height: 100px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    /* padding-left: 4px; */
+    float: left;
+    /* position: absolute; */
+
+}
+.video{
+    margin: 3px;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+.video video {
+    width: 100%;
     height: auto;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -705,23 +722,3 @@
 }
 
 /*** Footer End ***/
-.image{
-    float: left;
-    padding: 4px;
-    width: 200px;
-    height: 140px;
-}
-.image img{
-    width: 100% !important;
-    height: auto;
-}
-
-.video{
-    padding: 4px;
-    width: 200px;
-    height: 140px;
-}
-.video video{
-    width: 100%;
-    height: auto;
-}

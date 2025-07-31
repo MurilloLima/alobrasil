@@ -27,14 +27,7 @@
                                 style="width: 100%; height: 400px;">
                         </div>
                     </div>
-                    @foreach ($data->images as $item)
-                        <div class="image">
-                            <a class="lightbox" href="{{ asset('upload/imoveis/' . $item->image) }}">
-                                <img src="{{ asset('upload/imoveis/' . $item->image) }}"
-                                    style="width: 100px; height: 100px;" alt="">
-                            </a>
-                        </div>
-                    @endforeach
+
 
                 </div>
                 <div class="col-md-5">
@@ -52,30 +45,41 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p>Veja os vídeos</p>
+                        {{-- <p>Veja os vídeos</p> --}}
+                        @foreach ($data->images as $item)
+                            <a class="lightbox" href="{{ asset('upload/imoveis/' . $item->image) }}">
+                                <div class="image">
+                                    <img src="{{ asset('upload/imoveis/' . $item->image) }}" alt="" style="width: 200px; height: 140px;">
+                                </div>
+                            </a>
+                        @endforeach
                         @foreach ($data->videos as $item)
-                            <a class="lightbox" href="{{ asset('upload/video/' . $item->file) }}">
-                                <video src="{{ asset('upload/video/' . $item->file ?? '') }}" class="video"></video>
+                            <a class="" href="{{ asset('upload/video/' . $item->file) }}">
+                                <div class="video">
+                                    <video src="{{ asset('upload/video/' . $item->file) }}" style="width: 200px; height: 140px;"></video>
+                                </div>
                             </a>
                         @endforeach
 
                     </div>
+
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <span style="font-size: 10px">Compartilhar</span> <br>
-                        <a href="https://api.whatsapp.com/send?text=link/{{ $data->slug }}">
-                            <img src="{{ asset('home/img/whatsapp.png') }}" class="whatsapp" alt="" width="25">
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=link/">
-                            <img width="25" height="25"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png"
-                                alt="">
-                        </a>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <span style="font-size: 10px">Compartilhar</span> <br>
+                    <a href="https://api.whatsapp.com/send?text=link/{{ $data->slug }}">
+                        <img src="{{ asset('home/img/whatsapp.png') }}" class="whatsapp" alt="" width="25">
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=link/">
+                        <img width="25" height="25"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png"
+                            alt="">
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 @endsection
