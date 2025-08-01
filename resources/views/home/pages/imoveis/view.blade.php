@@ -82,14 +82,13 @@
                     @endforeach
 
                     @foreach ($data->videos as $item)
-                        <div class="col-lg-6 col-xl-4 wow fadeIn" data-wow-delay=".3s"
+                        <div class="col-lg-6 col-xl-4 text-center wow fadeIn" data-wow-delay=".3s"
                             style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
                             <div class="blog-item position-relative bg-light rounded" style="margin-top: 50px;">
-                                <a href="" data-toggle="modal"
+                                <a href="" data-toggle="modal" class="vview"
                                     data-target=".bd-example-modal-lg{{ $item->id }}">
-                                    <img src="{{ asset('upload/video/' . $item->file) }}"
-                                        class="img-fluid w-100 rounded-top" alt=""
-                                        style="width: 100px; height: 140px;">
+                                    <video src="{{ asset('upload/video/' . $item->file) }}"
+                                        width="200" height="140"></video>
                                 </a>
                             </div>
                         </div>
@@ -106,7 +105,8 @@
                                         </button>
                                     </div>
                                     <div class="text-center">
-                                        <iframe src="{{ asset('upload/video/' . $item->file) }}" width="600" height="450" frameborder="0"></iframe>
+                                        <iframe src="{{ asset('upload/video/' . $item->file) }}" width="600"
+                                            height="450" frameborder="0"></iframe>
                                     </div>
                                 </div>
                             </div>
