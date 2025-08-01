@@ -8511,8 +8511,7 @@ fieldset:disabled .btn {
 }
 
 .rounded-top {
-    border-top-left-radius: 8px !important;
-    border-top-right-radius: 8px !important
+    border-radius: 8px !important;
 }
 
 .rounded-end {
