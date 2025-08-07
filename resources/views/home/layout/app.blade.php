@@ -8,8 +8,13 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('home/img/icon.png') }}" sizes="any">
-    <link rel="icon" type="image/png" href="{{ asset('home/img/icon.png') }}" rel="icon">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('home/img/icon.png') }}" />
+    <link href="{{ asset('home/img/icon.png') }}" rel="shortcut icon" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('home/img/icon.png') }}" sizes="any" />
+    <link rel="icon" type="image/png" href="{{ asset('home/img/icon.png') }}" rel="icon" />
+    <link rel="icon" type="image/png" href="{{ asset('home/img/icon.png') }}" />
+    <meta property="og:image" itemprop="image" content="{{ asset('home/img/icon.png') }}">
     {{-- modal --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">

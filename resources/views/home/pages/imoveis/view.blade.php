@@ -88,7 +88,7 @@
                                 <a href="" data-toggle="modal" class="vview"
                                     data-target=".bd-example-modal-lg{{ $item->id }}">
                                     <video src="{{ asset('upload/video/' . $item->file) }}"
-                                        width="200" height="140"></video>
+                                        width="100%" height="auto"></video>
                                 </a>
                             </div>
                         </div>
